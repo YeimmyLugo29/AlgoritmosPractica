@@ -7,21 +7,15 @@ fun main(){
     //condicional2()
     //condicional3()
     //condicional4()
-    //condicional5()l
+    //condicional5()
     //condicional6()
-
 }
 
-fun condicional1(){
+fun Any.condicional1(){
     print("Ingrese la cantidad de llantas a comprar: ")
-    var cantidad = readln().toInt()
-    if (cantidad < 5){
-        val cantMenor = cantidad * 200000
-        println("El total de su compra es de $$cantMenor")
-    } else{
-        val cantMayor = cantidad * 180000
-        println("El total de su compra es de $$cantMayor")
-    }
+    var cantidadTotal = readln().toInt()
+    cantidadTotal = if (cantidadTotal < 5) cantidadTotal * 200000 else cantidadTotal * 180000
+    println("El total de su compra es de $$cantidadTotal")
 }
 
 fun condicional2(){
@@ -60,14 +54,9 @@ fun condicional3(){
 
 fun condicional4(){
     print("Ingrese el monto de su poliza de seguro: ")
-    var poliza = readln().toInt()
-    if (poliza < 50000){
-        val cuotaMax = poliza * 0.03
-        print("El valor de su cuota de seguro es de $${cuotaMax.toInt()} pesos")
-    }else{
-        val cuotaMin = poliza * 0.02
-        print("El valor de su cuota de seguro es de $${cuotaMin.toInt()} pesos")
-    }
+    var valorPoliza = readln().toInt()
+    valorPoliza = if (valorPoliza < 50000) (valorPoliza * 0.03).toInt() else (valorPoliza * 0.02).toInt()
+    print("El valor de su cuota de seguro es de $$valorPoliza pesos")
 }
 
 fun condicional5(){
@@ -81,7 +70,7 @@ fun condicional5(){
     if (promedio >= 4.5){
         var descuentoMatricula = matricula * 0.3
         var totalMatrMax = matricula - descuentoMatricula
-        print("Su promedio es $promedio, po lo tanto tiene 30% de descuento y su total es de $${totalMatrMax.toInt()} pesos")
+        print("Su promedio es $promedio, por lo tanto tiene 30% de descuento y su total es de $${totalMatrMax.toInt()} pesos")
     }else{
         var MatriculaIva = matricula * 0.1
         var totalMatricula = matricula + MatriculaIva
