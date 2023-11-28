@@ -6,6 +6,9 @@ fun main(){
     //cond2()
     //cond3()
     //cond4()
+    //cond5()
+    //cond6()
+    //cond7()
 }
 
 fun cond1(){
@@ -61,7 +64,7 @@ fun cond4(){
         val descuento10 = (totalCompra * 0.10).toInt()
         val compraFinal10 = (totalCompra - descuento10)
         print("Estimado cliente usted compro $cantidadPC computadoras, por lo tanto su descuento es de 10%, se le descontaran $descuento10 pesos y el total de su compra final es $compraFinal10 pesos")
-    }else if (cantidadPC >= 5){
+    }else if (cantidadPC >= 5 && cantidadPC <10){
         val descuento20 = (totalCompra * 0.20).toInt()
         val compraFinal20 = totalCompra - descuento20
         print("Estimado cliente usted compro $cantidadPC computadoras, por lo tanto su descuento es de 20%, se le descontaran $descuento20 pesos y el total de su compra final es $compraFinal20 pesos")
@@ -71,4 +74,81 @@ fun cond4(){
         print("Estimado cliente usted compro $cantidadPC computadoras, por lo tanto su descuento es de 40%, se le descontaran $descuento40 pesos y el total de su compra final es $compraFinal40 pesos")
     }
 }
+
+fun cond5(){
+    print("Ingresa tu edad: ")
+    var edad = readln().toInt()
+    print("Ingresa el nivel de tu SISBEN: ")
+    var sisben = readln().toInt()
+    if(edad > 18 && sisben == 1 ){
+        val descuento40 = (350000 * 0.40).toInt()
+        val total40 = 350000 - descuento40
+        print("Su libreta cuesta $350000, al ser mayor de 18 años se hara descuento de 40%, se descontaran $$descuento40, y su valor total a pagar sera de $$total40 pesos")
+    }else if (edad > 18 && sisben == 2 ){
+        val descuento30 = (350000 * 0.30).toInt()
+        val total30 = 350000 - descuento30
+        print("Su libreta cuesta $350000, al ser mayor de 18 años se hara descuento de 30%, se descontaran $$descuento30, y su valor total a pagar sera de $$total30 pesos")
+    }else if (edad > 18 && sisben == 3 ){
+        val descuento15 = (350000 * 0.15).toInt()
+        val total15 = 350000 - descuento15
+        print("Su libreta cuesta 350000, al ser mayor de 18 años se hara descuento de 15%, se descontaran $$descuento15, y su valor a pagar sera de $$total15 pesos")
+    }else if (edad == 18 && sisben == 1){
+        val descuento60 = (200000 * 0.60).toInt()
+        val total60 = 200000 - descuento60
+        print("Su libreta cuesta 200000, al tener 18 años se hara descuento de 60%, se descontaran $$descuento60, y su valor a pagar sera de $$total60 pesos")
+    }else if (edad == 18 && sisben == 2){
+        val descuentoMedio = (200000 * 0.30).toInt()
+        val totalMedio = 200000 - descuentoMedio
+        print("Su libreta cuesta 200000, al tener 18 años se hara descuento de 30%, se descontaran $$descuentoMedio, y su valor a pagar sera de $$totalMedio pesos")
+    }else if (edad == 18 && sisben == 3){
+        val descuento20 = (200000 * 0.20).toInt()
+        val total20 = 200000 - descuento20
+        print("Su libreta cuesta 200000, al tener 18 años se hara descuento de 20%, se descontaran $$descuento20, y su valor a pagar sera de $$total20 pesos")
+    }else if(sisben > 3){
+        print("No tendras descuento en tu libreta")
+    }
+}
+
+fun cond6(){
+    print("Ingrese primer numero: ")
+    var numero1 = readln().toInt()
+    print("Ingrese el segundo numero: ")
+    var numero2 = readln().toInt()
+    print("Ingrese el tercer numero: ")
+    var numero3 = readln().toInt()
+    if (numero1 > numero2 && numero1 > numero3){
+        print("El numero mayor es $numero1")
+    }else if (numero2 > numero1 && numero2 > numero3){
+        print("El numero mayor es $numero2")
+    }else if(numero3 > numero1 && numero3 > numero2){
+        print("El numero mayor es $numero3")
+    }
+}
+
+fun cond7(){
+    print("Ingrese el primer numero: ")
+    var numero1 = readln().toInt()
+    print("Ingrese el segundo numero: ")
+    var numero2 = readln().toInt()
+    print("Ingrese el tercer numero: ")
+    var numero3 = readln().toInt()
+    if(numero1 < numero2 && numero1 < numero3){
+        print("El numero menor es $numero1")
+    }else if (numero2 < numero1 && numero2 < numero3){
+        print("El numero menor es $numero2")
+    }else if (numero3 < numero2 && numero3 < numero1){
+        print("El numero menor es $numero3")
+    }
+}
+
+fun cond8(){
+    print("Ingresa el primer numero: ")
+    var num1 = readln().toInt()
+    print("Ingresa el segundo numero: ")
+    var num2 = readln().toInt()
+    print("Ingresa el tercer numero: ")
+    var num3 = readln().toInt()
+    
+}
+
 
