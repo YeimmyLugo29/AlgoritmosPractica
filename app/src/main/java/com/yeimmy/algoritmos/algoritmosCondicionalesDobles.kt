@@ -8,7 +8,8 @@ fun main(){
     //cond4()
     //cond5()
     //cond6()
-    //cond7()
+    //super cond7()
+    cond8()
 }
 
 fun cond1(){
@@ -136,7 +137,7 @@ fun cond7(){
         print("El numero menor es $numero1")
     }else if (numero2 < numero1 && numero2 < numero3){
         print("El numero menor es $numero2")
-    }else if (numero3 < numero2 && numero3 < numero1){
+    }else {
         print("El numero menor es $numero3")
     }
 }
@@ -148,7 +149,31 @@ fun cond8(){
     var num2 = readln().toInt()
     print("Ingresa el tercer numero: ")
     var num3 = readln().toInt()
-    
+    if(num1 > num2 && num2 > num3){
+        print("El numero mayor es $num1 \n" +
+                "El numero medio es $num2 \n" +
+                "El numero menor es $num3")
+    }else if(num2 > num1 && num1 > num3){
+        print("El numero mayor es $num2 \n" +
+                "El numero medio es $num1 \n" +
+                "El numero menor es $num3")
+    }else if (num3 > num1 && num1 > num2 ){
+        print("El numero mayor es $num3 \n" +
+                "El numero medio es $num1 \n" +
+                "El numero menor es $num2")
+    }else if (num1 > num3 && num3 > num2){
+        print("El  numero mayor es $num1 \n" +
+                "El numero medio es $num3 \n" +
+                "El numero menor es $num2")
+    }else if(num3 > num2 && num2 > num1){
+        print("El numero mayor es $num3 \n" +
+                "El numero medio es $num2 \n" +
+                "El numero menor es $num1")
+    }else{
+        print("El numero mayor es $num2 \n" +
+                "El numero medio es $num3 \n" +
+                "El numero menor es $num1")
+    }
 }
 
 
