@@ -9,7 +9,7 @@ fun main(){
     //cond5()
     //cond6()
     //super cond7()
-    cond8()
+    //cond8()
 }
 
 fun cond1(){
